@@ -1,25 +1,63 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-nav{
+.av{
     list-style:none;
+    list-style-type: none;
+    display: flex;
+    border:2px solid #000000;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px #000000;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 body{
     background-color: #D7E5E7;
 }
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-top: 7px;
+}
+.type{
+  margin-left: 380px;
+  display: flex;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.ell{
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  margin-left: 210px;
+}
+.perso{
+  width: 50px;
+  height: 50px;
+  margin-top: 7px;
+  margin-left: 20px;
+}
 button {
-    padding: 0.8em 1.8em;
-    border: 2px solid #17C3B2;
+    padding:0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid #035565;
     position: relative;
     overflow: hidden;
+    border-radius: 20px;
+    width: 100px;
     background-color: transparent;
     text-align: center;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 20px;
+    align-items: center;
     text-transform: uppercase;
     font-size: 16px;
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color: #17C3B2;
+    color: #035565;
    }
    
    button::before {
@@ -30,7 +68,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #17C3B2;
+    background: #035565;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -43,47 +81,79 @@ button {
    button:hover {
     color: #111;
    }
-   .beautiful-button {
+
+
+   .button1 {
+    padding:0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid #035565;
     position: relative;
-    display: inline-block;
-    background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
-   /* Gradient background */
-    color: white;
-   /* White text color */
-    font-family: "Segoe UI", sans-serif;
-   /* Stylish and legible font */
-    font-weight: bold;
-    font-size: 18px;
-   /* Large font size */
-    border: none;
-   /* No border */
-    border-radius: 30px;
-   /* Rounded corners */
-    padding: 14px 28px;
-   /* Large padding */
-    cursor: pointer;
-   /* Cursor on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-   /* Subtle shadow */
-    animation: button-shimmer 2s infinite;
-    transition: all 0.3s ease-in-out;
-   /* Smooth transition */
+    overflow: hidden;
+    border-radius: 20px;
+    width: 150px;
+    background-color: transparent;
+    text-align: center;
+    height: 50px;
+    margin-top: 100px;
+    margin-left: 700px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #035565;
+   }
+   
+   .button1::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #035565;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
   }
   
-  /* Hover animation */
+  .button1:hover::before {
+    width: 105%;
+  }
+  
+  .button1:hover {
+    color: #111;
+  }
+  .beautiful-button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, #FED5C5, #ffba9f);
+    color: #035565;
+    border:2px solid #035565;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-left: 550px;
+    width: 180px;
+    padding: 13px 28px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+  }
   .beautiful-button:hover {
-    background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+    background: linear-gradient(to bottom, #FED5C5, #f3ab8e);
     animation: button-particles 1s ease-in-out infinite;
     transform: translateY(-2px);
   }
-  
-  /* Click animation */
   .beautiful-button:active {
     transform: scale(0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
-  
-  /* Shimmer animation */
   @keyframes button-shimmer {
     0% {
       background-position: left top;
@@ -103,4 +173,49 @@ button {
     100% {
       background-position: right bottom;
     }
+  }
+  h1{
+    margin-left: 300px;
+    margin-top: 50px;
+    font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  font-style: normal;
+  }
+  h5{
+    margin-left: 680px;
+    font-size: 15px;
+  }
+  .beautiful-button2 {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, #FED5C5, #ffba9f);
+    color: #035565;
+    border:2px solid #035565;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-left: 100px;
+    width: 180px;
+    padding: 13px 28px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+  }
+  .beautiful-button2:hover {
+    background: linear-gradient(to bottom, #FED5C5, #f3ab8e);
+    animation: button-particles 1s ease-in-out infinite;
+    transform: translateY(-2px);
+  }
+  .beautiful-button2:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  .gg{
+    margin-left: 500px;
+    margin-top: -100px;
+    height: 600px;
+    width: 600px;
   }
