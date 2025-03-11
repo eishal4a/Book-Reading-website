@@ -126,7 +126,7 @@ button {
   .button1:hover {
     color: #D7E5E7;
   }
-  .beautiful-button {
+  .beautiful-btn{
     position: relative;
     display: inline-block;
     background: linear-gradient(to bottom, #FED5C5, #ffba9f);
@@ -144,12 +144,12 @@ button {
     animation: button-shimmer 2s infinite;
     transition: all 0.3s ease-in-out;
   }
-  .beautiful-button:hover {
+  .beautiful-btn:hover {
     background: linear-gradient(to bottom, #FED5C5, #f3ab8e);
     animation: button-particles 1s ease-in-out infinite;
     transform: translateY(-2px);
   }
-  .beautiful-button:active {
+  .beautiful-btn:active {
     transform: scale(0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
@@ -186,7 +186,7 @@ button {
     font-size: 15px;
     margin-top: -20px;
   }
-  .beautiful-button2 {
+  .beautiful-btn2 {
     position: relative;
     display: inline-block;
     background: linear-gradient(to bottom, #FED5C5, #ffba9f);
@@ -203,12 +203,12 @@ button {
     animation: button-shimmer 2s infinite;
     transition: all 0.3s ease-in-out;
   }
-  .beautiful-button2:hover {
+  .beautiful-bt2:hover {
     background: linear-gradient(to bottom, #FED5C5, #f3ab8e);
     animation: button-particles 1s ease-in-out infinite;
     transform: translateY(-2px);
   }
-  .beautiful-button2:active {
+  .beautiful-bt2:active {
     transform: scale(0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
