@@ -70,30 +70,27 @@ button {
     transition: .5s ease;
     display: block;
     z-index: -1;
-   }
-   
-   button:hover::before {
+  }
+  
+  button:hover::before {
     width: 105%;
-   }
-   
-   button:hover {
+  }
+  
+  button:hover {
     color: #D7E5E7;
-   }
-
-
-   .button1 {
-    padding:0px;
+  }
+  .button1 {
     padding-left: 5px;
     padding-right: 5px;
     border: 2px solid #035565;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
-    width: 150px;
+    border-radius: 15px;
+    width: 130px;
     background-color: transparent;
     text-align: center;
-    height: 50px;
-    margin-top: 80px;
+    height: 40px;
+    margin-top: 40px;
     margin-left: 700px;
     align-items: center;
     text-transform: uppercase;
@@ -102,9 +99,9 @@ button {
     z-index: 1;
     font-family: inherit;
     color: #035565;
-   }
-   
-   .button1::before {
+  }
+  
+  .button1::before {
     content: '';
     width: 0;
     height: 300%;
@@ -134,6 +131,7 @@ button {
     font-family: "Segoe UI", sans-serif;
     font-weight: bold;
     font-size: 18px;
+    margin-top: 140px;
     border-radius: 30px;
     margin-left: 550px;
     width: 180px;
@@ -175,13 +173,24 @@ button {
     margin-top: 35px;
     font-family: "Italiana", sans-serif;
   font-weight: 400;
+  position: absolute;
+  top: 24%;
+  left: 33%;
+  right: -20%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
   font-size: 40px;
   font-style: normal;
   }
   h5{
     margin-left: 680px;
     font-size: 15px;
-    margin-top: -20px;
+    margin-top: 80px;
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
   .beautiful-btn2 {
     position: relative;
@@ -210,8 +219,10 @@ button {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
   .gg{
-    margin-left: 500px;
-    margin-top: -100px;
+    margin-left: 475px;
+    margin-top: -200px;
     height: 600px;
     width: 600px;
+    filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.6));
+    border-radius: 10px;
   }
