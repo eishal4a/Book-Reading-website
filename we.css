@@ -314,3 +314,22 @@ button {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
+.para2{
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.leash{
+  margin-left: 100px;
+}
+.para4{
+  margin-left: 800px;
+  margin-top: -150px;
+}
+.para5{
+  background-color: #D9D9D9;
+  border: 2px solid #000;
+  border-radius: 20px;
+  width: 600px;
+}
