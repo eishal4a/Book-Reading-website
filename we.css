@@ -38,7 +38,6 @@ body{
   margin-left: 20px;
 }
 button {
-    padding:0px;
     padding-left: 5px;
     padding-right: 5px;
     border: 2px solid #035565;
@@ -162,8 +161,6 @@ button {
       background-position: right bottom;
     }
   }
-  
-  /* Particle animation */
   @keyframes button-particles {
     0% {
       background-position: left top;
