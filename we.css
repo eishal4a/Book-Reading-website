@@ -86,7 +86,7 @@ button {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    width: 130px;
+    width: 150px;
     background-color: transparent;
     text-align: center;
     height: 40px;
@@ -104,7 +104,7 @@ button {
   .button1::before {
     content: '';
     width: 0;
-    height: 300%;
+    height: 350%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -122,51 +122,48 @@ button {
   .button1:hover {
     color: #D7E5E7;
   }
-  .beautiful-btn{
+  .beautiful-btn {
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid #000;
     position: relative;
-    display: inline-block;
-    background: linear-gradient(to bottom, #FED5C5, #ffba9f);
-    color: #035565;
-    border:2px solid #035565;
-    font-family: "Segoe UI", sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 140px;
-    border-radius: 30px;
-    margin-left: 550px;
+    overflow: hidden;
+    border-radius: 15px;
     width: 180px;
-    padding: 13px 28px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    animation: button-shimmer 2s infinite;
-    transition: all 0.3s ease-in-out;
+    background-color: #FED5C5;
+    text-align: center;
+    height: 40px;
+    margin-top: 150px;
+    margin-left: 550px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #000;
   }
+  
+  .beautiful-btn::before {
+    content: '';
+    width: 0;
+    height: 450%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #035565;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+  }
+  
+  .beautiful-btn:hover::before {
+    width: 105%;
+  }
+  
   .beautiful-btn:hover {
-    background: linear-gradient(to bottom, #FED5C5, #f3ab8e);
-    animation: button-particles 1s ease-in-out infinite;
-    transform: translateY(-2px);
-  }
-  .beautiful-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  }
-  @keyframes button-shimmer {
-    0% {
-      background-position: left top;
-    }
-  
-    100% {
-      background-position: right bottom;
-    }
-  }
-  @keyframes button-particles {
-    0% {
-      background-position: left top;
-    }
-  
-    100% {
-      background-position: right bottom;
-    }
+    color: #D7E5E7;
   }
   h1{
     margin-left: 300px;
@@ -192,32 +189,51 @@ button {
     transform: translate(-50%, -50%);
     z-index: 2;
   }
+
   .beautiful-btn2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid #000;
     position: relative;
-    display: inline-block;
-    background: linear-gradient(to bottom, #FED5C5, #ffba9f);
-    color: #D7E5E7;
-    border:2px solid #D7E5E7;
-    font-family: "Segoe UI", sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 30px;
-    margin-left: 100px;
+    overflow: hidden;
+    border-radius: 15px;
     width: 180px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    animation: button-shimmer 2s infinite;
-    transition: all 0.3s ease-in-out;
+    background-color: #FED5C5;
+    text-align: center;
+    height: 40px;
+    margin-top: 150px;
+    margin-left:120px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #000;
   }
-  .beautiful-bt2:hover {
-    background: linear-gradient(to bottom, #FED5C5, #f3ab8e);
-    animation: button-particles 1s ease-in-out infinite;
-    transform: translateY(-2px);
+  
+  .beautiful-btn2::before {
+    content: '';
+    width: 0;
+    height: 450%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #035565;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
   }
-  .beautiful-bt2:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  
+  .beautiful-btn2:hover::before {
+    width: 105%;
   }
+  
+  .beautiful-btn2:hover {
+    color: #D7E5E7;
+  }
+
   .gg{
     margin-left: 475px;
     margin-top: -200px;
