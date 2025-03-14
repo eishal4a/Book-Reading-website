@@ -40,12 +40,12 @@ body{
 button {
     padding-left: 5px;
     padding-right: 5px;
-    border: 2px solid #035565;
+    border: 2px solid #000;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
     width: 100px;
-    background-color: transparent;
+    background-color: #035565;
     text-align: center;
     height: 40px;
     margin-top: 6px;
@@ -56,7 +56,7 @@ button {
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color: #035565;
+    color: #D7E5E7;
    }
    button::before {
     content: '';
@@ -66,7 +66,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #035565;
+    background: #D7E5E7;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -77,17 +77,17 @@ button {
   }
   
   button:hover {
-    color: #D7E5E7;
+    color: #035565;
   }
   .button1 {
     padding-left: 5px;
     padding-right: 5px;
-    border: 2px solid #035565;
+    border: 2px solid #000;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
     width: 150px;
-    background-color: transparent;
+    background-color: #035565;
     text-align: center;
     height: 40px;
     margin-top: 40px;
@@ -98,7 +98,7 @@ button {
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color: #035565;
+    color: #D7E5E7;
   }
   
   .button1::before {
@@ -109,7 +109,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #035565;
+    background: #D7E5E7;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -120,7 +120,7 @@ button {
   }
   
   .button1:hover {
-    color: #D7E5E7;
+    color: #035565;
   }
   .beautiful-btn {
     padding-left: 5px;
@@ -152,7 +152,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #035565;
+    background: #D7E5E7;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -163,9 +163,9 @@ button {
   }
   
   .beautiful-btn:hover {
-    color: #D7E5E7;
+    color: #000;
   }
-  h1{
+  .head{
     margin-left: 300px;
     margin-top: 35px;
     font-family: "Italiana", sans-serif;
@@ -179,7 +179,7 @@ button {
   font-size: 40px;
   font-style: normal;
   }
-  h5{
+  .head2{
     margin-left: 680px;
     font-size: 15px;
     margin-top: 80px;
@@ -220,7 +220,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #035565;
+    background: #D7E5E7;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -231,7 +231,7 @@ button {
   }
   
   .beautiful-btn2:hover {
-    color: #D7E5E7;
+    color: #000;
   }
 
   .gg{
@@ -242,3 +242,22 @@ button {
     filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.6));
     border-radius: 10px;
   }
+.head3{
+  margin-left: 350px;
+  font-size: 80px
+}
+.head4{
+  margin-left: 590px;
+  font-size: 20px;
+  margin-top: -30px;
+}
+#rect{
+  display: flex;
+}
+.squ{
+  background-color: #D9D9D9;
+  width: 200px;
+  height: 400px;
+  color: #000;
+  
+}
