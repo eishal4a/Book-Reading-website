@@ -331,5 +331,63 @@ button {
   background-color: #D9D9D9;
   border: 2px solid #000;
   border-radius: 20px;
+  height: 200px;
+  margin-bottom: 20px;
   width: 600px;
+}
+.button5{
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 180px;
+  background-color: #FED5C5;
+  text-align: center;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #000;
+}
+
+.button5::before {
+  content: '';
+  width: 0;
+  height: 450%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #D7E5E7;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.button5:hover::before {
+  width: 105%;
+}
+
+.button5:hover {
+  color: #000;
+}
+.logos{
+  height: 40px;
+  width: 40px;
+}
+#logo3{
+  font-size: 50px;
+}
+#logom{
+  background-color: #ffffff;
+  height: 500px;
+  margin-top: 100px;
+  width: 1200px;
 }
