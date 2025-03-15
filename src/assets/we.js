@@ -1,38 +1,48 @@
-// Get the elements
-const leftButton = document.querySelector('.left');
-const rightButton = document.querySelector('.right');
-const container = document.querySelector('#rect');
+document.addEventListener('DOMContentLoaded', function() {
+    const leftButton = document.querySelector('#left');
+    const rightButton = document.querySelector('#right');
+    const container = document.querySelector('#rect');
+    const slides = document.querySelectorAll('.squ');
 
-// Set initial position to 0
-let position = 0;
+    let slideIndex = 0; // Start from the first slide
 
-// Get all the "squ" divs
-const items = document.querySelectorAll('.squ');
+    function showDivs() {
+        const totalSlides = slides.length;
 
-// Calculate the total number of items to slide
-const totalItems = items.length;
+        // Ensure the slideIndex wraps around
+        if (slideIndex < 0) {
+            slideIndex = totalSlides - 1; // Go to the last slide
+        } else if (slideIndex >= totalSlides) {
+            slideIndex = 0; // Go back to the first slide
+        }
 
-// Slide left function
-function slideLeft() {
-  if (position > 0) {
-    position--;
-    updatePosition();
-  }
-}
+        // Calculate the translateX value
+        const translateX = -slideIndex * (100 / totalSlides); // Adjust based on the number of slides
+        container.style.transform = `translateX(${translateX}%)`;
+    }
 
-// Slide right function
-function slideRight() {
-  if (position < totalItems - 1) {
-    position++;
-    updatePosition();
-  }
-}
+    // Event listeners for the buttons
+    leftButton.addEventListener('click', () => {
+        slideIndex--; // Move to the left
+        showDivs();
+    });
 
-// Update the container's transform property to slide
-function updatePosition() {
-  container.style.transform = `translateX(-${position * 100}%)`;
-}
+    rightButton.addEventListener('click', () => {
+        slideIndex++; // Move to the right
+        showDivs();
+    });
 
-// Add event listeners to the buttons
-leftButton.addEventListener('click', slideLeft);
-rightButton.addEventListener('click', slideRight);
+    // Initial display
+    showDivs();
+});
+leftButton.addEventListener('click', () => {
+    console.log('Left button clicked'); // Log when left button is clicked
+    slideIndex--; // Move to the left
+    showDivs();
+});
+
+rightButton.addEventListener('click', () => {
+    console.log('Right button clicked'); // Log when right button is clicked
+    slideIndex++; // Move to the right
+    showDivs();
+});

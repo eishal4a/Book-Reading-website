@@ -258,13 +258,18 @@ button {
 }
 #rect{
   display: flex;
-  scroll-snap-type: x mandatory;
-  
+    transition: transform 0.5s ease; 
+    overflow: hidden;
+    width: 100%;
+}
+#left, #right {
+  cursor: pointer;
 }
 .squ{
   background-color: #D9D9D9;
   width: 300px;
   height: 460px;
+  min-width: 300px;
   border:2px solid #000;
   color: #000;
   border-radius: 15px;
@@ -415,17 +420,14 @@ button {
 }
 .one{
 margin-right: 200px;
-display: flexbox;
 font-size: 20px;
 }
 .two{
   margin-right: 200px;
-display: flexbox;
 font-size: 20px;
 }
 .three{
   margin-right: 200px;
-display: flexbox;
 font-size: 20px;
 }
 @media (max-width: 768px) {
