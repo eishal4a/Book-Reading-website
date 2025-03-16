@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const rightButton = document.getElementById('right');
     const container = document.querySelector('.squ-container');
     const items = document.querySelectorAll('.squ');
+    
+    // Ensure items exist
+    if (items.length === 0) {
+        console.error("No items found in the squ-container.");
+        return;
+    }
+
     let itemWidth = items[0].offsetWidth + 20; // Initial width calculation
     let currentIndex = 0;
 
@@ -10,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const maxIndex = items.length - Math.floor(window.innerWidth / itemWidth);
         if (currentIndex < 0) currentIndex = 0; 
         if (currentIndex > maxIndex) currentIndex = maxIndex;
+        
+        console.log(`Current Index: ${currentIndex}, Max Index: ${maxIndex}, Item Width: ${itemWidth}`);
+        
         container.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 
@@ -31,3 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateDisplay(); // Initial display update
 });
+function updateDisplay() {
+    const maxIndex = items.length - Math.floor(window.innerWidth / itemWidth);
+    if (currentIndex < 0) currentIndex = 0; 
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    
+    container.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}

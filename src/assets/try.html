@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .squ-container {
+            display: flex; /* Align items in a row */
+             /* Hide overflow */
+            width: 100%; /* Set a width for the container */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+        .squ {
+            min-width: 500px; /* Set a minimum width for each item */
+            margin-right: 20px; /* Space between items */
+            background-color: lightblue; /* Background color for visibility */
+            padding: 20px; /* Padding for content */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        button {
+            margin: 10px; /* Space around buttons */
+            padding: 10px 20px; /* Button padding */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="squ-container">
+    <div class="squ">Item 1</div>
+    <div class="squ">Item 2</div>
+    <div class="squ">Item 3</div>
+    <div class="squ">Item 4</div>
+    <div class="squ">Item 5</div>
+</div>
+<button id="left">Left</button>
+<button id="right">Right</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const leftButton = document.getElementById('left');
+        const rightButton = document.getElementById('right');
+        const container = document.querySelector('.squ-container');
+        const items = document.querySelectorAll('.squ');
+        let itemWidth = items[0].offsetWidth + 20; // Initial width calculation
+        let currentIndex = 0;
+
+        function updateDisplay() {
+            const maxIndex = items.length - Math.floor(window.innerWidth / itemWidth);
+            if (currentIndex < 0) currentIndex = 0; 
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            container.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+
+        leftButton.addEventListener('click', function() {
+            currentIndex--; 
+            updateDisplay();
+        });
+
+        rightButton.addEventListener('click', function() {
+            currentIndex++;
+            updateDisplay();
+        });
+
+        // Update itemWidth and display on window resize
+        window.addEventListener('resize', function() {
+            itemWidth = items[0].offsetWidth + 20; // Recalculate item width
+            updateDisplay(); // Update display after resizing
+        });
+
+        updateDisplay(); // Initial display update
+    });
+</script>
+
+</body>
+</html>
