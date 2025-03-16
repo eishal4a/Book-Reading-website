@@ -1,16 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
     const leftButton = document.getElementById('left');
     const rightButton = document.getElementById('right');
-    const rect = document.getElementById('rect');
-    let scrollAmount = 0;
+    const container = document.querySelector('.squ-container');
+    const items = document.querySelectorAll('.squ');
+    let itemWidth = items[0].offsetWidth + 20; // Initial width calculation
+    let currentIndex = 0;
+
+    function updateDisplay() {
+        const maxIndex = items.length - Math.floor(window.innerWidth / itemWidth);
+        if (currentIndex < 0) currentIndex = 0; 
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        container.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
 
     leftButton.addEventListener('click', function() {
-        scrollAmount -= 300; // Adjust the scroll amount as needed
-        rect.style.transform = `translateX(${scrollAmount}px)`;
+        currentIndex--; 
+        updateDisplay();
     });
 
     rightButton.addEventListener('click', function() {
-        scrollAmount += 300; // Adjust the scroll amount as needed
-        rect.style.transform = `translateX(${scrollAmount}px)`;
+        currentIndex++;
+        updateDisplay();
     });
+
+    // Update itemWidth and display on window resize
+    window.addEventListener('resize', function() {
+        itemWidth = items[0].offsetWidth + 20; // Recalculate item width
+        updateDisplay(); // Update display after resizing
+    });
+
+    updateDisplay(); // Initial display update
 });
