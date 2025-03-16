@@ -258,18 +258,16 @@ button {
 }
 #rect{
   display: flex;
-    transition: transform 0.5s ease; 
     overflow: hidden;
 }
 .squ-ccontainer{
   display: flex;
-  transition: transform 0.5s ease; 
+  transition: transform 0.3s ease; 
 }
 .squ{
   background-color: #D9D9D9;
   width: 300px;
-  height: 460px;
-  transition: transform 0.5s ease; 
+  height: 460px; 
   min-width: 300px;
   border:2px solid #000;
   color: #000;

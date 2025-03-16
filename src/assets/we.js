@@ -10,16 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    let itemWidth = items[0].offsetWidth + 20; // Initial width calculation
+    let itemWidth = items[0].offsetWidth + 20; // Initial width calculation (including margin)
     let currentIndex = 0;
 
     function updateDisplay() {
-        const maxIndex = items.length - Math.floor(window.innerWidth / itemWidth);
+        // Calculate the maximum index based on the total width of the container
+        const maxIndex = Math.ceil(container.scrollWidth / itemWidth) - 1; // Use scrollWidth for total width
         if (currentIndex < 0) currentIndex = 0; 
         if (currentIndex > maxIndex) currentIndex = maxIndex;
         
         console.log(`Current Index: ${currentIndex}, Max Index: ${maxIndex}, Item Width: ${itemWidth}`);
         
+        // Apply smooth transition
+        container.style.transition = 'transform 0.5s ease'; // Add transition
         container.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 
@@ -41,10 +44,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateDisplay(); // Initial display update
 });
-function updateDisplay() {
-    const maxIndex = items.length - Math.floor(window.innerWidth / itemWidth);
-    if (currentIndex < 0) currentIndex = 0; 
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-    
-    container.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-}
