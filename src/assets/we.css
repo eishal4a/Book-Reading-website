@@ -311,7 +311,7 @@ button {
   top: 50%;
   font-size: 50px;
   left: -300px;
-  margin-top: 1300px;
+  margin-top: 1350px;
   margin-left: 800px;
   cursor: pointer;
   display: flex;
@@ -322,7 +322,7 @@ button {
   top: 50%;
   right: 500px;
   font-size: 50px;
-  margin-top: 1300px;
+  margin-top: 1350px;
   cursor: pointer;
   display: flex;
   position: absolute;
